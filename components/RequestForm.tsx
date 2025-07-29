@@ -10,16 +10,24 @@ export default function MyForm() {
       <h2>Appointment Request</h2>
       <input 
         type="name"
-        placeholder="name"></input><br/>
+        placeholder="name"
+        required></input><br/>
         <input 
         type="phone number"
-        placeholder="phone number"></input><br/>
+        placeholder="phone number"
+        required></input><br/>
         <input 
         type="date"
+        required
         ></input>
         <input 
         type="message"
         placeholder="What can we help you with?"
+        required
+        ></input>
+        <input 
+        type="submit"
+        placeholder="Submit"
         ></input>
     </fieldset>
   );
