@@ -6,7 +6,13 @@ function RequestForm({ title }: { title: string }) {
 
 export default function MyForm() {
   return (
-    <fieldset>
+    <fieldset
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '10px',
+        width: '300px',
+      }}>
       <h2>Appointment Request</h2>
       <input 
         type="name"
@@ -19,12 +25,12 @@ export default function MyForm() {
         <input 
         type="date"
         required
-        ></input>
+        ></input><br/>
         <input 
         type="message"
         placeholder="What can we help you with?"
         required
-        ></input>
+        ></input><br/>
         <input 
         type="submit"
         placeholder="Submit"
