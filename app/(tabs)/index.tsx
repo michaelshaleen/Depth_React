@@ -6,6 +6,7 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import HamburgerMenu from '@/components/HamburgerNav';
 
 export default function HomeScreen() {
   return (
@@ -20,7 +21,8 @@ export default function HomeScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Redefine Depth</ThemedText>
         <MyApp  />
-        <HelloWave />
+        <HamburgerMenu />
+        <HelloWave /><br />
         <MyForm />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>

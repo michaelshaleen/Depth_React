@@ -17,7 +17,7 @@ const HamburgerMenu = ({ children, menuItems = [], menuWidth = 250 }) => {
 
   return (
     <View style={styles.container}>
-      {/* Hamburger Icon */}
+      {/* Hamburger Icon
       <TouchableOpacity style={styles.hamburger} onPress={toggleMenu}>
         <Ionicons name="menu" size={32} color="black" />
       </TouchableOpacity>
@@ -36,11 +36,12 @@ const HamburgerMenu = ({ children, menuItems = [], menuWidth = 250 }) => {
           </TouchableOpacity>
         ))}
       </Animated.View>
+      <button>Pricing</button>
 
       {/* Main Content */}
       <View style={styles.content}>
         {children}
-      </View>
+      </View> 
     </View>
   );
 };
