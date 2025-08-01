@@ -1,8 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, ReactNode } from 'react';
 import { View, TouchableOpacity, Text, StyleSheet, Animated } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-const HamburgerMenu = ({ children, menuItems = [], menuWidth = 250 }) => {
+type MenuItem = {
+  label: string;
+  onPress?: () => void;
+};
+
+type HamburgerMenuProps = {
+  children?: ReactNode;
+  menuItems?: MenuItem[];
+  menuWidth?: number;
+};
+
+const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ children, menuItems = [], menuWidth = 250 }) => {
   const [open, setOpen] = useState(false);
   const slideAnim = React.useRef(new Animated.Value(-menuWidth)).current;
 
@@ -17,7 +28,7 @@ const HamburgerMenu = ({ children, menuItems = [], menuWidth = 250 }) => {
 
   return (
     <View style={styles.container}>
-      {/* Hamburger Icon
+      {/* Hamburger Icon */}
       <TouchableOpacity style={styles.hamburger} onPress={toggleMenu}>
         <Ionicons name="menu" size={32} color="black" />
       </TouchableOpacity>
@@ -36,7 +47,7 @@ const HamburgerMenu = ({ children, menuItems = [], menuWidth = 250 }) => {
           </TouchableOpacity>
         ))}
       </Animated.View>
-      <button>Pricing</button>
+      {/* <button>Pricing</button> */}
 
       {/* Main Content */}
       <View style={styles.content}>
